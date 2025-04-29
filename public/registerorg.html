@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+    <style>
+      body{
+        background-image: url('images/bg.jpg');
+      }
+      .bg-dark{
+        background-color: transparent !important;
+      }
+      label{
+        color: white;
+      }
+      h4,p{
+        color: white;
+      }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">ELectripliance</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin">Amin Panel</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/mobile">Mobile Phones</a></li>
+                  <li><a class="dropdown-item" href="/laptop">Laptops</a></li>
+                  <li><a class="dropdown-item" href="/fan">Fans</a></li>
+                  <li><a class="dropdown-item" href="/tv">TVs</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/other">Other</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/login" tabindex="-1">Login/Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="signup-form">
+                    <form action="/register2" class="mt-5 border p-4 bg-light shadow" method="post">
+                        <h4 class="mb-5">Create Your Account(Organization)</h4>
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label>Organization Name<span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter Organization Name">
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                                <label>Contact Email<span class="text-danger">*</span></label>
+                                <input type="text" name="email" class="form-control" placeholder="Enter Organization's email">
+                            </div>
+
+                            <div class="mb-3 col-md-6">
+                              <label>Organization Code/ID<span class="text-danger">*</span></label>
+                              <input type="text" name="id" class="form-control" placeholder="Enter organization code/id">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                              <label>Contact No.<span class="text-danger">*</span></label>
+                              <input type="text" name="contact" class="form-control" placeholder="Enter contact number">
+                            </div>
+                            <h4 class="mb-5">Enter Employee Details</h4>
+                            <div class="mb-3 col-md-6">
+                              <label>Employee ID(First Employee)<span class="text-danger">*</span></label>
+                              <input type="text" name="employee1_id" class="form-control">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                              <label>Employee Name(First Employee)<span class="text-danger">*</span></label>
+                              <input type="text" name="employee1_name" class="form-control">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                              <label>Employee ID(Second Employee)<span class="text-danger">*</span></label>
+                              <input type="text" name="employee2_id" class="form-control" value="">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                              <label>Employee Name(Second Employee)<span class="text-danger">*</span></label>
+                              <input type="text" name="employee2_name" class="form-control" value="">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                              <label>Employee ID(Third Employee)<span class="text-danger">*</span></label>
+                              <input type="text" name="employee3_id" class="form-control" value="">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                              <label>Employee Name(Third Employee)<span class="text-danger">*</span></label>
+                              <input type="text" name="employee3_name" class="form-control" value="">
+                            </div>
+                            <div class="mb-3 col-md-12">
+                                <label>Password<span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter Password">
+                            </div>
+                            <div class="mb-3 col-md-12">
+                                <label>Confirm Password<span class="text-danger">*</span></label>
+                                <input type="password" name="confirmpassword" class="form-control" placeholder="Enter your password again">
+                            </div>
+                            <div class="col-md-12">
+                                <button class="btn btn-primary float-end">Sign UP</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p>Register for Individual <a href="/register">Click Here</a></p>
+                    <p>If you have account, Please <a href="/login">Login Now</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

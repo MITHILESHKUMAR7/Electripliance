@@ -1,0 +1,9 @@
+.bg-light{
+    background-color: transparent !important;
+}
+.navbar-link{
+    border: 2px solid black;
+}
+.container{
+    margin-top: 60px;
+}
